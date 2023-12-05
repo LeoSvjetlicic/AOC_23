@@ -1,6 +1,6 @@
 package day2
 
-import java.io.File
+import readFile
 
 const val RED_KEY = "red"
 const val BLUE_KEY = "blue"
@@ -79,13 +79,3 @@ fun parseLine(line: String): Pair<Int, List<List<Pair<Int, String>>>> {
     return Pair(index, transformedData)
 }
 
-fun readFile(filePath: String): List<String> {
-    val lines: List<String>
-    try {
-        lines = File(filePath).readLines()
-    } catch (e: Exception) {
-        println(e.message)
-        return emptyList()
-    }
-    return lines
-}

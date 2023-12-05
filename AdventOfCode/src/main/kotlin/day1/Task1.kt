@@ -79,7 +79,7 @@ fun findFirstWordIndex(wordList: List<String>, targetString: String): Pair<Int, 
     var tempPair = Pair<Int, String?>(targetString.length, null)
     for (word in wordList) {
         val index = targetString.indexOf(word, ignoreCase = true)
-        if (index != -1 && tempPair.first > index ) {
+        if (index != -1 && tempPair.first > index) {
             tempPair = Pair(index, word)
         }
     }
@@ -95,16 +95,6 @@ fun findLastWordIndex(wordList: List<String>, targetString: String): Pair<Int, S
         }
     }
     return tempPair
-}
-
-fun readFile(filePath: String): List<String> {
-    val lines: List<String>
-    try {
-        lines = File(filePath).readLines()
-    } catch (e: Exception) {
-        return emptyList()
-    }
-    return lines
 }
 
 private operator fun Char.plus(c: Char): String {
