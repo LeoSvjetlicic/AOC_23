@@ -1,7 +1,6 @@
-import day1.calibrateDocumentTask1
-import day1.calibrateDocumentTask2
-import day1.readFile
+import day2.day2Task1
+import day2.day2Task2
 
 fun main(args: Array<String>) {
-    println(calibrateDocumentTask2(readFile("D:\\AdventOfCode\\2023\\AOC_23\\AdventOfCode\\out\\production\\AdventOfCode\\day1\\input1.txt")))
+    println(day2Task2())
 }
